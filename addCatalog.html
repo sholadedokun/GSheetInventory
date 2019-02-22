@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base target="_top">
+</head>
+
+<body>
+    <form id="myForm">
+        <label>Type :</label><input id="type" name="type" type="text" />
+        <label>Title :</label><input id="title" name="title" type="text" />
+        <label>Speaker :</label><input id="speaker" name="speaker" type="text" />
+        <label>Date :</label><input id="date" name="date" type="text" />
+        <label>Tag :</label><textarea id="tag" name="tag"> </textarea>
+        <label>Location :</label><input id="location" name="location" type="text" />
+
+        <input type="button" value="Submit"
+            onClick="google.script.run.withSuccessHandler(DataSaved).addCatalog(this.form)" />
+    </form>
+    <div id="Message"></div>
+    <script>
+        function DataSaved() {
+            document.getElementById('Message').innerHTML = "Data Saved";
+        };
+    </script>
+</body>
+
+</html>

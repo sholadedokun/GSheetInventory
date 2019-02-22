@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base target="_top">
+</head>
+
+<body>
+    <form id="myForm">
+        <input id="firstName" name="firstName" type="text" />
+        <input type="button" value="Submit"
+            onClick="google.script.run.withSuccessHandler(DataSaved).processInventory(this.form)" />
+    </form>
+    <div id="Message"></div>
+    <script>
+        function DataSaved() {
+            document.getElementById('Message').innerHTML = "Data Saved";
+        };
+    </script>
+</body>
+
+</html>
